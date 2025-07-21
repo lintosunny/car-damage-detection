@@ -47,16 +47,10 @@ def predict(image_path):
 
     if not trained_model:
         trained_model = CarClassifierResNet()
-        trained_model.load_state_dict(torch.load("model/saved_model.pth"))
+        trained_model.load_state_dict(torch.load("app/saved_model.pth"))
         trained_model.eval()
 
     with torch.no_grad():
         output = trained_model(image_tensor)
         _, predicted_class = torch.max(output, 1)
         return class_names[predicted_class.item()]
-    
-
-if __name__ == "__main__":
-    # Example usage
-    image_path = "temp_file.jpg"
-    print(predict(image_path))  # Replace with an actual image path for testing

@@ -1,5 +1,6 @@
 from fastapi import FastAPI, File, UploadFile
 from model_helper import predict
+
 app = FastAPI()
 
 
