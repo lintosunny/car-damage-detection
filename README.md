@@ -3,7 +3,8 @@
 This app let's you drag and drop an image of a car and it will tell you what kind of damage it has.
 The model is trained on third quarter front and rare view hence the picture should capture the third quarter front or rare view of a car. 
 
-![app](app_screenshot.png)
+<img src="app_screenshot.png" alt="app" width="390" height="450"/>
+
 
 ### Model Details
 1. Used ResNet50 for transfer learning
@@ -25,5 +26,5 @@ The model is trained on third quarter front and rare view hence the picture shou
    
 2. Run the streamlit app:
    ```commandline
-   streamlit run app.py
+   streamlit run app/main.py
    ```
